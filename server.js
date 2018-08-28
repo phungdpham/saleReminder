@@ -2,8 +2,8 @@ require("dotenv").config();
 var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
-var passport   = require('passport');
-var session    = require('express-session');
+var passport = require('passport');
+var session  = require('express-session');
 var env = require('dotenv').load();
 
 var db = require("./models");
@@ -30,10 +30,13 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
+//Moments
+var moment = require("moment");
+
 // Routes
-require("./routes/apiRoutes")(app);
+require("./routes/api-routes")(app);
 require('./routes/auth.js')(app,passport);
-require("./routes/htmlRoutes")(app);
+require("./routes/html-routes")(app);
 
 
 //load passport strategies

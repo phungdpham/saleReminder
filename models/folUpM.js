@@ -12,6 +12,14 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.BOOLEAN,
         allowNull: false
       },
+      status: {
+        type: DataTypes.ENUM,
+        allowNull: false
+      },
+      status: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false
+      },
      action: {
          type: DataTypes.STRING,
          allowNull: false
