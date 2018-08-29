@@ -54,10 +54,10 @@ $(document).ready(function() {
         var newFolUpCustName = $("<span>");
         newFolUpCustName.addClass("cust_name float-left");
         newFolUpCustName.text("Customer: " + folUpCard.firstname + " " + folUpCard.lastname + " || ");
-        //Showing Business Name
-        var newFolUpBusName = $("<span>");
-        newFolUpBusName.addClass("business_name float-right");
-        newFolUpBusName.addClass(folUpCard.business_name);
+                    // //Showing Business Name
+                    // var newFolUpBusName = $("<span>");
+                    // newFolUpBusName.addClass("business_name float-right");
+                    // newFolUpBusName.addClass(folUpCard.business_name);
 
         //Follow up card body
         var  newFolUpBody = $("<div>");
@@ -77,12 +77,12 @@ $(document).ready(function() {
         //showing work phone and mobile phone
         var newFolUpNum = $("<p>");
         newFolUpNum.addClass("card-text contact");
-        var newFolUpWorkNum = $("<span>");
-        newFolUpWorkNum.addClass("work-num");
-        newFolUpWorkNum.text(folUpCard.workphone + " || ");
-        var newFolUpMobileNum = $("<span>");
-        newFolUpMobileNum.addClass("mobile-num");
-        newFolUpMobileNum.text(folUpCard.mobilephone);
+        var newFolUpPhone = $("<span>");
+        newFolUpPhone.addClass("phone");
+        newFolUpPhone.text("Phone Number " + folUpCard.workphone);
+                // var newFolUpMobileNum = $("<span>");
+                // newFolUpMobileNum.addClass("mobile-num");
+                // newFolUpMobileNum.text(folUpCard.mobilephone);
 
         //Structuring the card html
         newFolUpCard.append(newFolUpCardHeading);
@@ -90,10 +90,10 @@ $(document).ready(function() {
         newFolUpCardHeading.append(newFolUpCustName);
         newFolUpCardHeading.append(newFolUpBusName);
         newFolUpBody.append(newFolUpAction);
-        newFolUpBody.append(newFolUpStatus);
+                    // newFolUpBody.append(newFolUpStatus);
         newFolUpBody.append(newFolUpMemo);
         newFolUpBody.append(newFolUpNum);
-        newFolUpNum.append(newFolUpWorkNum);
+        newFolUpNum.append(newFolUpPhone);
         newFolUpNum.append(newFolUpMobileNum);
 
         //Buttons inside the follow up card
