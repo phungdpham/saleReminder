@@ -1,5 +1,3 @@
-
-
 //holding all of follow-up cards for current date
 $(document).ready(function() {
     //cardContainer holds all follow-up cards
@@ -9,6 +7,8 @@ $(document).ready(function() {
     $(document).on("click", "button.complete", completeFolUp);
     $(document).on("click", "button.delete", deleteFolUp);
     var folUpCards;
+
+    if (location.href === )
 
     //Function to grabs follow-up cards from the database and update the view
     function getFolUp() {
@@ -22,10 +22,10 @@ $(document).ready(function() {
                 initializeCards();
             }
         });
-    }
-
-    //Getting the initial list of follow up cards
+    };
     getFolUp();
+
+
     //InitializeCards handles appending all of follow up cards HTML inside
     //CardsContainer
     function initializeCards() {
@@ -79,7 +79,7 @@ $(document).ready(function() {
         newFolUpNum.addClass("card-text contact");
         var newFolUpPhone = $("<span>");
         newFolUpPhone.addClass("phone");
-        newFolUpPhone.text("Phone Number " + folUpCard.workphone);
+        newFolUpPhone.text("Phone Number " + folUpCard.phone);
                 // var newFolUpMobileNum = $("<span>");
                 // newFolUpMobileNum.addClass("mobile-num");
                 // newFolUpMobileNum.text(folUpCard.mobilephone);
@@ -110,10 +110,13 @@ $(document).ready(function() {
         return newFolUpCard;
     };
 
-    //Function to complete a follow-up
-    // function completeFolUp() {
-    //     var currentFolUpCard = $(this)
-    // }
+  //Displaying a message when there are no follow up for today
+  function displayEmpty() {
+      cardsContainer.empty();
+      var message = $("<h2>");
+      message.html("There are no follow-up today");
+      cardsContainer.append(message);
+  };
 
 
 

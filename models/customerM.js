@@ -1,12 +1,12 @@
 module.exports = function(sequelize, DataTypes) {
-    var Customer = sequelize.define("Customer", {
+    var Customer = sequelize.define("Customers", {
       firstname: {
         type: DataTypes.STRING,
         allowNull: false,
       },
       lastname: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
       },
       // business_name: {
       //   type: DataTypes.STRING,
@@ -14,7 +14,7 @@ module.exports = function(sequelize, DataTypes) {
       // },
       address: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       phone: {
         type: DataTypes.STRING,
@@ -30,7 +30,7 @@ module.exports = function(sequelize, DataTypes) {
       },
       email: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
       }
   
     });
